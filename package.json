@@ -58,5 +58,13 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "ruban": "^0.1.2"
-  }
+  },
+  "files": [
+    "lib",
+    "src",
+    "router.js",
+    "fetch.js",
+    "index.js",
+    "saga.js"
+  ]
 }
