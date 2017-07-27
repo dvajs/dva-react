@@ -17,7 +17,7 @@ export default function (opts = {}) {
     initialReducer: {
       routing,
     },
-    setupMiddleware(middlewares) {
+    setupMiddlewares(middlewares) {
       return [
         routerMiddleware(history),
         ...middlewares,
