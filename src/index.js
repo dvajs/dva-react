@@ -24,7 +24,7 @@ export default function (opts = {}) {
       ];
     },
     setupApp(app) {
-      app._history = syncHistoryWithStore(history, app._store);
+      app._history = patchHistory(syncHistoryWithStore(history, app._store));
     },
   };
 
@@ -103,4 +103,13 @@ function getProvider(store, app, router) {
 function render(container, store, app, router) {
   const ReactDOM = require('react-dom');
   ReactDOM.render(React.createElement(getProvider(store, app, router)), container);
+}
+
+function patchHistory(history) {
+  const oldListen = history.listen;
+  history.listen = (callback) => {
+    callback(history.getCurrentLocation());
+    oldListen.call(history, callback);
+  };
+  return history;
 }
