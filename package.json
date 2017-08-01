@@ -1,15 +1,15 @@
 {
-  "name": "react-dva",
+  "name": "dva-react",
   "version": "0.1.2",
   "description": "Official React bindings for dva, with react-router2.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dvajs/react-dva"
+    "url": "https://github.com/dvajs/dva-react"
   },
-  "homepage": "https://github.com/dvajs/react-dva",
+  "homepage": "https://github.com/dvajs/dva-react",
   "keywords": [
     "dva",
-    "react-dva",
+    "dva-react",
     "redux",
     "redux-saga",
     "elm",
